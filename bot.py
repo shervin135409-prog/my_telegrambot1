@@ -1,12 +1,9 @@
-import os
 from telebot import TeleBot
 
 # توکن از Environment Variable خونده میشه
-TOKEN = os.getenv("7779922952:AAEQ1gb9RUgJTw0PrnVQfGyazbw_LxX5QIQ")
+TOKEN ="7779922952:AAEQ1gb9RUgJTw0PrnVQfGyazbw_LxX5QIQ"
 
 # اگر توکن خالی بود خطا بده
-if not TOKEN:
-    raise ValueError("توکن ربات پیدا نشد! لطفاً BOT_TOKEN رو در Environment Variable ست کن.")
 
 bot = TeleBot(TOKEN)
 
@@ -20,3 +17,4 @@ def help_command(message):
 
 # ربات همیشه آنلاین با polling
 bot.polling(none_stop=True, timeout=60)
+
